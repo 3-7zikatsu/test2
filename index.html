@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3年7組 クイズバトル | 文化祭</title>
+    <meta
+      name="description"
+      content="3年7組の文化祭出し物『QUIZ BATTLE』を紹介する1ページサイトです。"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">3<span>-</span>7 <span>QUIZ BATTLE</span></div>
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#schedule">schedule</a></li>
+        <li><a href="#rules">rules</a></li>
+        <li><a href="#access">information</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="eyebrow">3年7組 CLASS ATTRACTION</div>
+      <h1>QUIZ<br />BATTLE<span class="accent">.</span></h1>
+      <p class="sub">
+        早押し早解き、知識と反射神経のガチンコ勝負。3年7組が贈る文化祭最大級の頭脳バトルへようこそ。
+      </p>
+
+      <div class="buzzer-wrap">
+        <button class="buzzer" id="buzzerBtn" type="button">PUSH</button>
+        <div class="buzzer-hint">押してみよう（クリック / タップ）</div>
+      </div>
+
+      <div class="scoreboard">
+        <div class="stat">
+          <div class="num" id="counterValue">0</div>
+          <div class="label">総PUSH数</div>
+        </div>
+        <div class="stat">
+          <div class="num">30</div>
+          <div class="label">出題数</div>
+        </div>
+        <div class="stat">
+          <div class="num">4</div>
+          <div class="label">最大チーム数</div>
+        </div>
+      </div>
+      <div class="counter-status" id="statusMessage">
+        全アクセス者の総PUSH数実装検討中
+      </div>
+    </div>
+
+    <section id="about">
+      <span class="section-title"><span class="num">ABOUT / 01</span>出し物について</span>
+      <p class="lead">
+        3年7組が企画する早押しクイズ大会です。ジャンルは雑学からアニメ・スポーツ・学校あるあるまで幅広く出題し、チーム対抗形式で盛り上がります。
+      </p>
+      <div class="about-grid">
+        <div class="about-card">
+          <p>
+            参加者は数人ずつのチームに分かれ、ステージ上のボタンで早押し対決。正解数に応じてポイントが加算され、最終スコアで優勝チームを決定します。
+          </p>
+          <p style="margin-bottom: 0;">
+            観覧のみの参加も大歓迎です。会場は誰でも自由に見学・応援できます。
+          </p>
+        </div>
+        <div class="about-card">
+          <ul class="rule-list" style="border: none; background: none; padding: 0;">
+            <li><span class="tag">対象</span>在校生・保護者・来場者どなたでも</li>
+            <li><span class="tag">形式</span>チーム対抗・早押し方式</li>
+            <li><span class="tag">参加費</span>無料</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <span class="section-title"><span class="num">SCHEDULE / 02</span>タイムスケジュール</span>
+      <p class="lead">当日は複数回開催予定。お好きな回に参加できます。</p>
+      <div class="ticket">
+        <div class="time">10:30</div>
+        <div class="desc"><strong>第1回 予選ラウンド</strong><span>受付開始 10:15〜</span></div>
+      </div>
+      <div class="ticket">
+        <div class="time">13:00</div>
+        <div class="desc"><strong>第2回 予選ラウンド</strong><span>受付開始 12:45〜</span></div>
+      </div>
+      <div class="ticket">
+        <div class="time">15:00</div>
+        <div class="desc"><strong>決勝ラウンド</strong><span>予選通過チームによる最終決戦</span></div>
+      </div>
+    </section>
+
+    <section id="rules">
+      <span class="section-title"><span class="num">RULES / 03</span>ルール早見表</span>
+      <ul class="rule-list">
+        <li><span class="tag">01</span>問題は4択・早押し形式。最初に正解したチームに1ポイント。</li>
+        <li><span class="tag">02</span>誤答した場合は次のチームに解答権が移ります。</li>
+        <li><span class="tag">03</span>各ラウンド終了時点で最多ポイントのチームが勝ち抜けです。</li>
+      </ul>
+    </section>
+
+    <div class="cta" id="access">
+      <h2>会場でお待ちしています</h2>
+      <p style="opacity: 0.8;">詳しい教室位置や最新情報は当日の案内板・パンフレットをご確認ください。</p>
+      <div class="info">
+        <div><strong>教室</strong>3年7組（◯階 ◯号室）</div>
+        <div><strong>開催日</strong>文化祭当日</div>
+        <div><strong>お問い合わせ</strong>3年7組 実行委員まで</div>
+      </div>
+    </div>
+
+    <footer>3年7組 クイズバトル実行委員会 &mdash; 文化祭特設ページ</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
