@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
 }
 
 body {
@@ -41,6 +42,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   padding: 18px 6vw;
   background: rgba(13, 21, 38, 0.9);
   backdrop-filter: blur(6px);
@@ -50,6 +52,9 @@ nav {
 .brand {
   font-weight: 900;
   font-size: 1.1rem;
+  color: var(--paper);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand span {
@@ -59,13 +64,15 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   font-size: 0.92rem;
 }
 
 nav a {
+  display: block;
+  padding: 8px 10px;
   text-decoration: none;
   color: var(--paper);
   opacity: 0.8;
@@ -74,6 +81,12 @@ nav a {
 nav a:hover {
   opacity: 1;
   color: var(--gold);
+}
+
+nav a:focus-visible,
+.buzzer:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .hero {
@@ -149,6 +162,7 @@ nav a:hover {
   transition: transform 0.15s ease-out, 
               box-shadow 0.15s ease-out;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .buzzer.pressing {
@@ -212,7 +226,7 @@ nav a:hover {
 }
 
 section {
-  padding: 90px 6vw;
+  padding: clamp(56px, 9vw, 90px) 6vw;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -353,13 +367,29 @@ footer {
 }
 
 @media (max-width: 560px) {
+  html {
+    scroll-padding-top: 116px;
+  }
+
   nav {
-    padding: 14px 5vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 10px 5vw;
   }
 
   nav ul {
-    gap: 14px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
     font-size: 0.8rem;
+  }
+
+  nav a {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 9px 6px;
+    text-align: center;
   }
 
   .hero {
@@ -367,11 +397,38 @@ footer {
   }
 
   .scoreboard {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 48px;
+  }
+
+  .stat {
+    padding: 16px 6px;
+  }
+
+  .stat .num {
+    font-size: 1.7rem;
+  }
+
+  .stat .label {
+    font-size: 0.68rem;
+    letter-spacing: 0;
+  }
+
+  section {
+    padding: 56px 5vw;
+  }
+
+  .about-card {
+    padding: 22px;
   }
 
   .ticket {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cta .info {
+    display: grid;
+    gap: 18px;
   }
 }

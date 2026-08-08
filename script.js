@@ -1,11 +1,13 @@
 const btn = document.getElementById("buzzerBtn");
 const counterValue = document.getElementById("counterValue");
+const statusMessage = document.getElementById("statusMessage");
 
 let localCount = 0;
 let isAnimating = false;
 
 function setCounter(count) {
   counterValue.textContent = Number(count || 0).toLocaleString();
+  statusMessage.textContent = `この端末でのPUSH回数: ${Number(count || 0).toLocaleString()}`;
 }
 
 btn.addEventListener("click", () => {
